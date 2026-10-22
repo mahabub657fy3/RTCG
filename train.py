@@ -12,14 +12,14 @@ import torch.optim as optim
 
 def main():
     parser = argparse.ArgumentParser(description='RTCG')
-    parser.add_argument('--train_dir', default='D:/ImageNet/ImageNet_val_folder10', help='imagenet')
+    parser.add_argument('--train_dir', default='D:/ImageNet/ImageNet', help='imagenet')
     parser.add_argument('--batch_size', type=int, default=8)
     parser.add_argument('--epochs', type=int, default=10)
     parser.add_argument('--lr', type=float, default=1e-4)
     parser.add_argument('--eps', type=int, default=16)
     parser.add_argument('--model_type', type=str, default='res50', help='Source model = incv3, res50')
     parser.add_argument('--start_epoch', type=int, default=0)
-    parser.add_argument('--label_flag', type=str, default='N8', help='Label nums: N8, C20,...,C200')
+    parser.add_argument('--label_flag', type=str, default='N8', help='Label nums: N8, C50')
     parser.add_argument('--nz', type=int, default=16, help='nz')
     parser.add_argument('--save_dir', type=str, default='checkpoints/')
     parser.add_argument('--load_path', type=str, default='')
