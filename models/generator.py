@@ -167,7 +167,7 @@ class RTCGenerator(nn.Module):
             x = F.pad(x, (0, pad_w, 0, pad_h), mode="reflect")
         return x, (h, w)
 
-    # ----- Forward -----------------------------------------------------
+  
     def forward(self, x, cond, eps=0):
         # 2D conditioning ONLY. cond must be 4D [B, cond_channels, H_c, W_c].
         assert cond.dim() == 4, (
@@ -211,22 +211,5 @@ class RTCGenerator(nn.Module):
         out = out[..., :H, :W]                              # crop padding
         out = torch.tanh(out)
         out = self.alf_layer(out)
-        # out = self.block_mask(out)
         return out * eps
 
-
-# ============================================================================
-# Convenience presets
-# ============================================================================
-def cond_restormer_spatial_small(**kwargs):
-    """Smaller preset. Recommended starting point when GPU memory is tight."""
-    return CondRestormerSpatial(
-        dim=48, n_latent=4, n_heads_latent=4, cond_dim=96, **kwargs
-    )
-
-
-def cond_restormer_spatial_base(**kwargs):
-    """Base preset. Use when GPU has spare memory."""
-    return CondRestormerSpatial(
-        dim=64, n_latent=8, n_heads_latent=8, cond_dim=128, **kwargs
-    )
