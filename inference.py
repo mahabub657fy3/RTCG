@@ -4,8 +4,8 @@ from torch.utils.data import DataLoader
 from utils import *
 
 def main():
-    parser = argparse.ArgumentParser(description='TGAF')
-    parser.add_argument('--test_dir', default='results/gan_n8/model-9', help='Testing Data')
+    parser = argparse.ArgumentParser(description='RTCG')
+    parser.add_argument('--test_dir', default='results/', help='Testing Data')
     parser.add_argument('--batch_size', type=int, default=12, help='Batch Size')
     parser.add_argument('--model_t',type=str, default= 'normal',  help ='Model under attack : vgg16, vgg19, ..., dense121')
     parser.add_argument('--label_flag', type=str, default='N8', help='Label nums: N8, C20, C50, ...')
