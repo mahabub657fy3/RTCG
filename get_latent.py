@@ -13,7 +13,7 @@ from matplotlib import pyplot as plt
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
-MODEL_CACHE_DIR = r"C:\Users\lab3080\.cache\huggingface\hub\models--Manojb--stable-diffusion-2-base"
+MODEL_CACHE_DIR = "\.cache\huggingface\hub\models--Manojb--stable-diffusion-2-base"
 
 snapshot_dirs = glob.glob(os.path.join(MODEL_CACHE_DIR, "snapshots", "*"))
 if not snapshot_dirs:
