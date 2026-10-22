@@ -28,12 +28,6 @@ Existing multi-target generators tend to produce a nearly image-agnostic templat
 - **Restoration-transformer bottleneck.** Eight restoration transformer blocks (RTBs) work at 1/16 resolution. Each block uses channel-wise attention (MDTA) and a gated feed-forward network (GDFN), as in [Restormer](https://github.com/swz30/Restormer). The bottleneck adapts to each image and keeps its spatial layout.
 - **Persistent spatial conditioning.** The target is a 2D Stable Diffusion-2 latent. It modulates every block of the encoder, bottleneck, and decoder per pixel. The 8 convolutional residual blocks (CRBs) use **SpatialFiLM**. The 8 RTBs use **SpatialAdaLN-Zero**. This gives 24 modulation sites in total.
 
-<p align="center">
-  <img src="figures/feature_maps.png" width="80%" alt="Bottleneck features of CGNC, TGAF and RTCG">
-  <br>
-  <em>Intermediate features of three conditional generators for the same input image. RTCG keeps the layout of the input through its bottleneck while the target is injected at every block.</em>
-</p>
-
 ## Repository Structure
 
 ```
