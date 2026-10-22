@@ -5,15 +5,15 @@ from models.generator import RTCGenerator
 
 def main():
     parser = argparse.ArgumentParser(description='RTCG')
-    parser.add_argument('--data_dir', default='D:/ImageNet/neurips2017_dev', help='ImageNet validation data')
+    parser.add_argument('--data_dir', default='/neurips2017_dev', help='ImageNet validation data')
     parser.add_argument('--is_nips', action='store_true', default=True,  help='Evaluation on NIPS data')
     parser.add_argument('--batch_size', type=int, default=8, help='Batch size')
     parser.add_argument('--eps', type=int, default=16, help='Perturbation budget')
     parser.add_argument('--model_type', type=str, default='incv3',  help='Source model = incv3, res50')
-    parser.add_argument('--load_path', type=str, default='checkpoints/Full_dataset_incv3/model-9.pth', help='Load path')
+    parser.add_argument('--load_path', type=str, default='checkpoints/', help='Load path')
     parser.add_argument('--label_flag', type=str, default='N8', help='Label nums: N8')
     parser.add_argument('--nz', type=int, default=16, help='nz')
-    parser.add_argument('--save_dir', type=str, default='results/ccck', help='Dir to save adv images')
+    parser.add_argument('--save_dir', type=str, default='results/', help='Dir to save adv images')
     args = parser.parse_args()
     print(args)
 
