@@ -60,34 +60,23 @@ def encode_text_batch(prompts):
 prompts=[
     # 150 — sea lion
     "Photo of sea lion, resting on a rock, in a natural coastal environment",
-
     # 426 — barometer
     "A vintage analog barometer instrument, single object centered on a plain white background, "
-    "circular brass dial with numbered pressure scale and pointer needle, polished wood case, "
-    "studio product photograph, soft even lighting, sharp focus, high resolution, photorealistic",
-
+    "circular brass dial with numbered pressure scale and pointer needle, polished wood case",
     # 843 — swing
     "A single wooden porch swing bench with vertical slatted backrest and armrests, "
     "hanging from two thick ropes attached at each end, white cushion on the seat, isolated on a pure white background. ",
-
     # 715 — pickelhaube
     "A single Prussian pickelhaube spiked helmet, museum display, centered on a neutral grey background, "
-    "polished black leather dome, brass spike on top, metal trim and chinstrap, "
-    "studio product photograph, soft directional lighting, sharp focus, high detail, photorealistic",
-
+    "polished black leather dome, brass spike on top, metal trim and chinstrap",
     # 952 — fig
     "Photo of a fig fruit, cut open, showing seeds, centered on a clean white background",
-
     # 507 — combination lock
     "A single metal combination padlock with a rotating numbered dial, centered on a plain white background, "
-    "brushed silver body, black numbered wheel, shackle visible at top, "
-    "studio product photograph, soft even lighting, sharp focus, macro detail, photorealistic",
-
+    "brushed silver body, black numbered wheel, shackle visible at top",
     # 590 — hand-held computer (PDA)
     "A single handheld PDA device with a small rectangular LCD screen and stylus, "
-    "centered on a plain white background, plastic casing with physical buttons below the screen, "
-    "studio product photograph, soft even lighting, sharp focus, high detail, photorealistic",
-
+    "centered on a plain white background, plastic casing with physical buttons below the screen",
     # 62 — rock python
     "A single rock python snake coiled on dry earth, full body visible, centered in frame, "
     "patterned brown and tan scales with dark blotches, head raised slightly,"]
