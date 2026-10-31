@@ -272,7 +272,7 @@ local_weights = {
 
 ## Target Classes and Conditioning Latents
 
-RTCG follows the 8-target protocol of C-GSP and TGAF (`--label_flag N8`):
+RTCG follows the 8-target protocol of [TGAF](https://doi.org/10.1609/aaai.v40i9.37651) (`--label_flag N8`):
 
 | ID | Class | ID | Class |
 |--:|:--|--:|:--|
