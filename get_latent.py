@@ -30,7 +30,7 @@ pipe.scheduler = DDIMScheduler.from_config(pipe.scheduler.config)
 
 tokenizer = pipe.tokenizer
 
-classification_model = models.resnet152(weights=torchvision.models.ResNet152_Weights.IMAGENET1K_V1)
+classification_model = models.resnet50(weights=torchvision.models.ResNet50_Weights.IMAGENET1K_V1)
 classification_model = classification_model.to(device)
 classification_model.eval()
 
